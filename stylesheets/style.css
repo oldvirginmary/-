@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* Header */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    margin-bottom: 60px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emblem {
+    width: 95px;
+    height: 63px;
+}
+
+.logo-text {
+    font-family: "Roboto Slab", serif;
+}
+
+.header__phone-number {
+    padding: 15px 10px;
+    font-size: 17px;
+    text-decoration: none;
+    color: #000000;
+    border: 3px solid #EC7100;
+}
+
+.header__phone-number:hover {
+    text-decoration: underline;
+}
+
+
+/* Page block */
+
+.page-section {
+    max-width: 560px;
+    margin-bottom: 45px;
+}
+
+.page-title {
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+.page-subtitle {
+    line-height: 1.35em;
+    font-size: 18px;
+    color: #676767;
+}
+
+.section__title {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.call-section__phone-number {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 22px;
+    color: #353535;
+}
+
+.back-call-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.back-call-form input,
+.back-call-form button {
+    outline: none;
+}
+
+.back-call-form__input {
+    padding: 12px 15px;
+    margin-bottom: 25px;
+    border: 3px solid #353535;
+}
+
+.back-call-form__input:focus {
+    border-color: #8a2be2;
+}
+
+.back-call-form__input--invalid {
+    border-color: #EC7100;
+}
+
+.back-call-form__input {
+    font-size: 18px;
+}
+
+.back-call-form__input::placeholder {
+    font-size: 18px;
+}
+
+.back-call-form__submit-btn {
+    padding: 12px 15px;
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: none;
+    border: 3px solid #000000;
+}
+
+.back-call-form__submit-btn:hover {
+    border-color: #8a2be2;
+}
+
+
+/* Footer */
+
+.postscript {
+    padding-bottom: 30px;
+    font-size: 18px;
+    color: #9C9C9C;
+}
+
+
+
+@media (min-width: 425px) {
+    /* Header */
+
+    .emblem {
+        width: 131px;
+        height: 87px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        padding-left: calc(50% - 768px / 2 + 20px);
+        padding-right: calc(50% - 768px / 2 + 20px);
+    }
+
+
+    /* Header */
+
+    .main-header {
+        margin-bottom: 80px;
+    }
+
+    .emblem {
+        width: 176px;
+        height: 117px;
+    }
+
+    .logo-text {
+        font-size: 24px;
+    }
+
+    .header__phone-number {
+        font-size: 24px;
+    }
+
+
+    /* Page block */
+
+    .page-section {
+        margin-bottom: 65px;
+    }
+
+    .page-title {
+        margin-bottom: 35px;
+        font-size: 48px;
+    }
+
+    .page-subtitle {
+        font-size: 24px;
+    }
+
+    .section__title {
+        margin-bottom: 35px;
+        font-size: 36px;
+    }
+
+    .call-section__title {
+        max-width: 350px;
+    }
+
+    .call-section__phone-number {
+        margin-bottom: 45px;
+        font-size: 36px;
+    }
+
+    .back-call-form__input {
+        font-size: 24px;
+    }
+    
+    .back-call-form__input::placeholder {
+        font-size: 24px;
+    }
+
+    .back-call-form__submit-btn {
+        font-size: 24px;
+    }
+
+
+    /* Footer */
+
+    .postscript {
+        padding-bottom: 65px;
+    }
+}
