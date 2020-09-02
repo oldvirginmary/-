@@ -42,7 +42,7 @@ body {
     font-family: "Roboto Slab", serif;
 }
 
-.header__phone-number {
+.main-header__phone-number {
     padding: 15px 10px;
     font-size: 17px;
     text-decoration: none;
@@ -50,7 +50,7 @@ body {
     border: 3px solid #EC7100;
 }
 
-.header__phone-number:hover {
+.main-header__phone-number:hover {
     text-decoration: underline;
 }
 
@@ -173,7 +173,7 @@ body {
         font-size: 24px;
     }
 
-    .header__phone-number {
+    .main-header__phone-number {
         font-size: 24px;
     }
 
