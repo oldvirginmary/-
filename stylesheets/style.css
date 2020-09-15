@@ -68,15 +68,21 @@ body {
 .equipment-list {
     display: flex;
     flex-direction: column;
-    align-items: start;
     padding-top: 15px;
+    padding-left: 20px;
     margin: 0;
     list-style: none;
 }
 
 .equipment {
+    position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    padding-top: 15px;
+}
+
+.equipment:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 .equipment:hover .equipment-title {
@@ -99,19 +105,21 @@ body {
     transition: border 0.3s;
 }
 
-.equipment-title:not(:last-child) {
-    margin-bottom: 5px;
-}
-
 .quetion-icon {
     align-self: flex-start;
     width: 20px;
-    margin-top: 8px;
 }
 
 .equipment-description {
-    margin-left: 20px;
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px;
+    width: 100%;
+    height: 100%;
 
     color: #FFFFFF;
     font-size: 16px;
@@ -124,8 +132,25 @@ body {
     transition: all 0.2s;
 }
 
+.equipment-description::after {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+    background-image: url("../images/close.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+}
+
 
 /* Footer */
+
+.footer {
+    padding-bottom: 30px;
+}
 
 .postscript {
     font-size: 16px;
@@ -157,6 +182,19 @@ body {
 
     .advantages-list {
         font-size: 24px;
+    }
+
+    .quetion-icon {
+        margin-right: 20px;
+    }
+
+    .equipment-description {
+        position: initial;
+        width: auto;
+    }
+
+    .equipment-description::after {
+        display: none;
     }
 
 
