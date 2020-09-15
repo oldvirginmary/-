@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+body, h1, h2, h3, p {
     padding: 0;
     margin: 0;
 }
@@ -24,30 +24,20 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
-    margin-bottom: 60px;
-}
-
-.logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-bottom: 50px;
 }
 
 .emblem {
-    width: 95px;
-    height: 63px;
-}
-
-.logo-text {
-    font-family: "Roboto Slab", serif;
+    width: 70px;
 }
 
 .main-header__phone-number {
     padding: 15px 10px;
-    font-size: 17px;
+    font-size: 20px;
     text-decoration: none;
     color: #000000;
-    border: 3px solid #EC7100;
+    border: 4px solid #EC7100;
+    border-radius: 40px;
 }
 
 .main-header__phone-number:hover {
@@ -58,95 +48,84 @@ body {
 /* Page block */
 
 .page-section {
-    max-width: 560px;
+    max-width: 640px;
     margin-bottom: 45px;
 }
 
 .page-title {
     margin-bottom: 25px;
-    font-size: 32px;
+    font-size: 28px;
 }
 
-.page-subtitle {
-    line-height: 1.35em;
+.advantages-list {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4em;
     font-size: 18px;
-    color: #676767;
+    list-style: none;
 }
 
-.section__title {
-    margin-bottom: 25px;
-    font-size: 24px;
-}
-
-.call-section__phone-number {
-    display: block;
-    margin-bottom: 25px;
-    font-size: 22px;
-    color: #353535;
-}
-
-.back-call-form {
+.equipment-list {
     display: flex;
     flex-direction: column;
+    align-items: start;
+    padding-top: 15px;
+    margin: 0;
 }
 
-.back-call-form input,
-.back-call-form button {
-    outline: none;
+.equipment-list li {
+    border-bottom: 3px dashed #EC7100;
+    line-height: 1.7em;
 }
 
-.back-call-form__input {
-    padding: 12px 15px;
-    margin-bottom: 25px;
-    border: 3px solid #353535;
+.equipment-list li:hover {
+    border-color: #000000;
 }
 
-.back-call-form__input:focus {
-    border-color: #8a2be2;
-}
-
-.back-call-form__input--invalid {
-    border-color: #EC7100;
-}
-
-.back-call-form__input {
-    font-size: 18px;
-}
-
-.back-call-form__input::placeholder {
-    font-size: 18px;
-}
-
-.back-call-form__submit-btn {
-    padding: 12px 15px;
-    font-family: "Roboto Slab", serif;
-    font-size: 20px;
-    text-transform: uppercase;
-    background: none;
-    border: 3px solid #000000;
-}
-
-.back-call-form__submit-btn:hover {
-    border-color: #8a2be2;
+.equipment-list li:not(:last-child) {
+    margin-bottom: 5px;
 }
 
 
 /* Footer */
 
 .postscript {
-    padding-bottom: 30px;
-    font-size: 18px;
+    font-size: 16px;
     color: #9C9C9C;
 }
 
 
-
-@media (min-width: 425px) {
+@media (min-width: 530px) {
     /* Header */
 
+    .main-header {
+        margin-bottom: 60px;
+    }
+
     .emblem {
-        width: 131px;
-        height: 87px;
+        width: 90px;
+    }
+
+    .main-header__phone-number {
+        padding-left: 18px;
+        padding-right: 18px;
+        font-size: 24px;
+    }
+
+    .page-title {
+        margin-bottom: 28px;
+        font-size: 34px;
+    }
+
+    .advantages-list {
+        font-size: 24px;
+    }
+
+
+    /* Footer */
+
+    .postscript {
+        font-size: 20px;
     }
 }
 
@@ -165,16 +144,11 @@ body {
     }
 
     .emblem {
-        width: 176px;
-        height: 117px;
-    }
-
-    .logo-text {
-        font-size: 24px;
+        width: 120px;
     }
 
     .main-header__phone-number {
-        font-size: 24px;
+        font-size: 28px;
     }
 
 
@@ -189,40 +163,7 @@ body {
         font-size: 48px;
     }
 
-    .page-subtitle {
+    .advantages-list {
         font-size: 24px;
-    }
-
-    .section__title {
-        margin-bottom: 35px;
-        font-size: 36px;
-    }
-
-    .call-section__title {
-        max-width: 350px;
-    }
-
-    .call-section__phone-number {
-        margin-bottom: 45px;
-        font-size: 36px;
-    }
-
-    .back-call-form__input {
-        font-size: 24px;
-    }
-    
-    .back-call-form__input::placeholder {
-        font-size: 24px;
-    }
-
-    .back-call-form__submit-btn {
-        font-size: 24px;
-    }
-
-
-    /* Footer */
-
-    .postscript {
-        padding-bottom: 65px;
     }
 }
