@@ -81,7 +81,7 @@ body {
 
 .equipment:hover .equipment-title {
     border-color: #000000;
-    transition: all 0.3s;
+    transition: border 0.3s;
 }
 
 .quetion-icon:hover + .equipment-description {
@@ -96,7 +96,7 @@ body {
 
     border-bottom: 3px dashed #EC7100;
     line-height: 1.7em;
-    transition: all 0.3s;
+    transition: border 0.3s;
 }
 
 .equipment-title:not(:last-child) {
