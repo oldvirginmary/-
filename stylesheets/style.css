@@ -84,18 +84,16 @@ body {
     margin-bottom: 10px;
 }
 
-.equipment:hover .equipment-title {
-    border-color: #000000;
-    transition: border 0.3s;
-}
-
 .equipment-title {
     display: flex;
     margin-right: 10px;
 
     border-bottom: 3px dashed #EC7100;
     line-height: 1.7em;
-    transition: border 0.3s;
+}
+
+.equipment-title:hover {
+    border-color: #000000;
 }
 
 .hint {
