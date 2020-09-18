@@ -10,6 +10,9 @@
     <title>Колесница</title>
 </head>
 <body class="container">
+
+    <div id="app">
+
     <header class="main-header">
         <img class="emblem" src="images/logo.svg">
         <a class="main-header__phone-number" href="tel:+79236773717">+7(923)677-37-17</a>
@@ -23,18 +26,7 @@
             <ul class="advantages-list">
                 <li class="advantage">
                     Используем подготовленные вездеходы:
-                    <ul class="equipment-list">
-                        <li class="equipment">
-                            <p class="equipment-title">УАЗ Patrol</p>
-                            <img class="quetion-icon" src="images/question.svg">
-                            <p class="equipment-description">цены не зависят от сложности</p>
-                        </li>
-                        <li class="equipment">
-                            <p class="equipment-title">ГАЗ-66</p>
-                            <img class="quetion-icon" src="images/question.svg">
-                            <p class="equipment-description">цены не зависят от сложности</p>
-                        </li>
-                    </ul>
+                    <equipments-list v-bind:equipments="equipments"></equipments-list>
                 </li>
             </ul>
         </section>
@@ -45,6 +37,24 @@
             * Работаем по Красноярску и Красноярскому краю
         </p>
     </footer>
+
+    </div>
+
+    <template id="equipments-list-template">
+        <ul class="equipment-list">
+            <li class="equipment" v-for="equipment in equipments">
+                <p class="equipment-title">{{ equipment.title }}</p>
+                <div class="hint">
+                    <img class="question-icon" src="images/question.svg"
+                        v-on:click="openHint">
+                    <p class="equipment-description container"
+                        v-on:click="closeHint">
+                        {{ equipment.description }}
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </template>
 
     <script src="scripts/vue.js"></script>
     <script src="scripts/script.js"></script>
